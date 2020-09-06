@@ -8,7 +8,6 @@ const router = express.Router();
 router.get("/", authController.isLoggedIn, viewController.getOveriew);
 router.get(
   "/stories/:id",
-  authController.protect,
   authController.isLoggedIn,
   viewController.getStories
 );
