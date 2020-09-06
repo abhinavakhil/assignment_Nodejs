@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.route("/").get(storiesController.getTitle);
 
-router.use(authController.protect);
+//router.use(authController.protect);
 
 router.route("/:id").get(storiesController.getStories);
 

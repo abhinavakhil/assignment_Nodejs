@@ -48,3 +48,9 @@ exports.getLogout = (req, res) => {
     title: "Logged out",
   });
 };
+
+exports.getSignupForm = (req, res) => {
+  res.status(200).render("signup", {
+    title: "Create an account",
+  });
+};
