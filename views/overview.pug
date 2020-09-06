@@ -1,0 +1,17 @@
+extends base
+
+block content
+   main.main
+    .card-container
+    
+      each story in Stories
+        .card
+          .card__header  
+            h3.heading-tertirary
+              span= story.title
+
+          .card__details 
+          a.card__text(href=`/stories/${story._id}`) 
+            p.card__text= story.title
+            
+            

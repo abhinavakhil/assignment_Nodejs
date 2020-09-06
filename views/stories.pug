@@ -1,0 +1,17 @@
+extends base
+
+block content
+   main.main
+    .card-container__content
+    
+        .card
+          .card__header
+          .card__details
+            h4.card__sub-heading= `${Stories.title}`
+            p.card__text= Stories.content
+    
+    .card__footer
+            btn.btn--green.btn--small Visits 
+             p.card__tex= Stories.counter
+
+    
