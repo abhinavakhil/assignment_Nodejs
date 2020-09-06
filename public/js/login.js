@@ -41,7 +41,7 @@ export const signup = async (name, email, password) => {
       },
     });
     // Redirect to the homepage after 1.5 seconds
-    if (res.data.status === "Success!") {
+    if (res.data.status === "success") {
       showAlert("success", "Signed up successfully! Redirecting...");
       homeRedirect(1500);
     }
