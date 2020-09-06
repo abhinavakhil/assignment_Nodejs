@@ -1,12 +1,6 @@
 import axios from "axios";
 import { showAlert } from "./alert";
 
-const homeRedirect = (time) => {
-  window.setTimeout(() => {
-    location.assign("/");
-  }, time);
-};
-
 export const login = async (email, password) => {
   try {
     const res = await axios({
@@ -40,10 +34,13 @@ export const signup = async (name, email, password) => {
         password,
       },
     });
+    console.log("LOgimm.js", res.data.status);
     // Redirect to the homepage after 1.5 seconds
     if (res.data.status === "success") {
       showAlert("success", "Signed up successfully! Redirecting...");
-      homeRedirect(1500);
+      window.setTimeout(() => {
+        location.assign("/");
+      }, 1500);
     }
   } catch (err) {
     // Get the error | (err.response.data) comes from axios
